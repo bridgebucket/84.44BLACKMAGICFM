@@ -1,0 +1,33 @@
+:root {
+    --bg-color: rgb(20, 20, 20);
+    --card-color: rgb(23, 23, 23);
+}
+html {  
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+body {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: rgb(20, 20, 20);
+    font-size: 1vw;
+    line-height: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+    color:rgb(138, 138, 138);
+    transition: 0.5s;
+}
+a:hover {
+    text-shadow: 1px 0px 20px #fff;
+}
