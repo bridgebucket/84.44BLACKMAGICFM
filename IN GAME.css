@@ -8,7 +8,7 @@ html {
 }
 body {
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    background-color: rgb(20, 20, 20);
+    background-color: --bg-color;
     font-size: 1vw;
     line-height: 20px;
     justify-content: center;
@@ -22,6 +22,8 @@ body {
     width: 100vw;
     height: 100vh;
     min-height: 100vh;
+    min-width: 100vw;
+    background-color: --bg-color;
 }
 a{
     text-decoration: none;
