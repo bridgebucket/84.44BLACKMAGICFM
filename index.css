@@ -37,7 +37,7 @@ section {
     width: 100vw;
     height: 100vh;
     min-height: 100vh;
-    min-width: 100vh;
+    min-width: 100vw;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -52,7 +52,7 @@ section {
     animation: slideUp 2.5s forwards;
 }
 .loader-img {
-    width: 30em;
+    width: 30vw;
     animation: fadeOut 2s forwards;
 }
 @keyframes slideUp {
@@ -158,12 +158,17 @@ h2 {
     width: 100vw;
     height: 100vh;
     min-height: 100vh;
+    min-width: 100vw;
     font-size: 20px;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 .content-wrapper {
     display: grid;
     grid-column-gap: 10vw;
     grid-row-gap: 5vh;
+    width: 60vw;
 }
 .content-socials {
     width: 15vw;
