@@ -137,10 +137,6 @@ h1 {
     font-family: MYRIAD;
     color: white;
 }
-p{
-    text-decoration: none;
-    color:rgb(138, 138, 138);
-}
 
 h2 {
     text-decoration: none;
@@ -190,12 +186,16 @@ h2 {
     grid-row: 2;
 }
 
-a{
+a, p{
     text-decoration: none;
     color:rgb(138, 138, 138);
     transition: 0.5s;
 }
 a:hover {
     color: white;
-    text-shadow: 1px 0px 20px #707070;
+    text-shadow: 1px 0px 20px #fff;
+}
+p:hover {
+    color: white;
+    text-shadow: 1px 0px 20px #fff;
 }
