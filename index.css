@@ -1,0 +1,161 @@
+:root { --bg-color: rgb(20, 20, 20); }
+
+/* the main two fonts for 84.44 is myriad and hiragino mincho pron... very different i know */
+
+@font-face {
+    font-family: "MYRIAD";
+    src: url("FONT/MYRIADPRO-REGULAR.woff") format('woff');
+}
+@font-face {
+    font-family: "MYRIADBOLDIT";
+    src: url("FONT/MYRIADPRO-BOLDIT.woff") format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+body {
+    font-family: MYRIAD;
+    background-color: rgb(20, 20, 20);
+    color: aliceblue;
+}
+.section {
+    text-align:center;
+}
+
+#loader {
+    position: fixed;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: 50;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    background-color: rgb(10, 10, 10);
+    animation: slideUp 2.5s forwards;
+}
+@keyframes slideUp {
+    0% { transform: translateY(0); }
+    40% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+#loader-img {
+    width: 35vw;
+    animation: fadeOut 2s forwards;
+}
+@keyframes fadeOut {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 2s, opacity 2s linear;
+    }
+}
+
+#header {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    padding-left: 35px;
+    z-index: 10;
+}
+#header img{
+    padding-left: 35px;
+}
+#splashScreen {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #141414; */
+    background-image: linear-gradient(to bottom, #141414, #141414 80%, #101010);
+}
+#splashText {
+    font-family: MYRIADBOLDIT;
+    font-size:8vw;
+    display: flex;
+    justify-content: center;
+
+    filter: drop-shadow(1px 1px 34px #000);
+    background-image:
+        linear-gradient(300deg,#dc2f83,#e65c5d,#f8a51d);
+    background-size: 180% 180%;
+    background-clip: text;
+    color: rgba(255, 255, 255, 0);
+
+    animation: gradient-animation 8s ease infinite;
+    overflow: hidden;
+    z-index: 5;
+}
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+.drop {
+    animation: dropIn 2.3s ease-in-out forwards;
+    animation-delay: calc(var(--order) * 20ms);
+}
+@keyframes dropIn {
+    0% { transform: translateY(300px); }
+    85% { transform: translateY(-5px); }
+    100%   { transform: translateX(0); }
+}
+
+/* content */
+#contentSection {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #101010, #101010 93%, #0A0A0A)
+}
+#content-wrapper {
+    display: grid;
+    justify-content: center;
+}
+#content-wrapper > * {
+    width: 15vw;
+}
+.content a {
+    font-family: MYRIAD;
+    text-decoration: none;
+    color:rgb(138, 138, 138);
+    transition: 0.5s;
+}
+.content a:hover {
+    color: white;
+    text-shadow: 1px 0px 10px #fff;
+}
+.content h2 {
+    color: white;
+    text-decoration: none;
+    font-family: MYRIAD;
+    padding: 1rem;
+    border-width: 1px;
+    border-style: solid;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-image: linear-gradient(to left, transparent,white, transparent) 1 0%;
+}
+#footer{
+    background-color: #0a0a0a;
+    margin: 25px;
+}
+#footer img {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}

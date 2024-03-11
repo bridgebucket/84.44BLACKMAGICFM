@@ -1,0 +1,81 @@
+:root { --bg-color: rgb(20, 20, 20); }
+
+/* the main two fonts for 84.44 is myriad and hiragino mincho pron... very different i know */
+
+@font-face {
+    font-family: "MYRIAD";
+    src: url("FONT/MYRIADPRO-REGULAR.woff") format('woff');
+}
+@font-face {
+    font-family: "MYRIADBOLDIT";
+    src: url("FONT/MYRIADPRO-BOLDIT.woff") format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+body {
+    font-family: MYRIAD;
+    background-color: rgb(20, 20, 20);
+    color: aliceblue;
+    overflow: hidden;
+}
+
+#container {
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: MYRIAD;
+}
+
+#audio-player {
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin: -100px 0 0 -150px;
+}
+
+#content {
+    color:rgb(234, 234, 234);
+}
+#content p {
+    margin: 10px;
+}
+
+#blob {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    background-image: linear-gradient(
+      300deg,
+      #dc2f83,
+      #e65c5d,
+      #f8a51d
+    );
+    -webkit-animation: blob-fuckery 25s linear infinite;
+            animation: blob-fuckery 25s linear infinite;
+    transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+}
+#blob:hover {
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    box-shadow:
+      inset 0 0 0 600px rgba(20,20,20, 0.2),
+      inset 150px 150px 0 0px #f8a51d;
+  }
+@keyframes blob-fuckery {
+    0% {
+      transform: translate(1250px, 250px) rotate(0deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+  
+    50% {
+      transform: translate(1250px, 250px) rotate(180deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+
+    100% {
+        transform: translate(1250px, 250px) rotate(360deg);
+        border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+      }
+}
